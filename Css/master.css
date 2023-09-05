@@ -18,6 +18,11 @@
     --sec-font: 'Nosifer', cursive;
     --thd-font: 'Inter', sans-serif;
     --fth-font: 'Shojumaru', cursive;
+    --kantumruy-font: 'Kantumruy Pro', sans-serif;
+    --kaushan-font: 'Kaushan Script', cursive;
+    --racing-font: 'Racing Sans One', cursive;
+    --bills-font: 'Stick No Bills', sans-serif;
+    
 }
 
 .container {
@@ -126,9 +131,10 @@ header ul h1 span {
 }
 
 .button {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--racing-font);
     color: var(--darkwhite-color);
-    font-weight: 600;
+    background-color: var(--main-color);
+    font-weight: 100;
     font-size: 20px;
     display: flex;
     width: 220px;
@@ -140,6 +146,7 @@ header ul h1 span {
     box-shadow: 0 0 20px 0 var(--darkp-color);
     position: relative;
     transition: .3s;
+    text-transform: capitalize;
 }
 
 .button::after {
@@ -205,9 +212,11 @@ header ul h1 span {
 
 .land-icons h6 {
     color: var(--darkwhite-color);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--racing-font);
     font-size: 17px;
     text-transform: capitalize;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
 .land-icons div:hover i {
@@ -216,16 +225,18 @@ header ul h1 span {
 }
 /* landing done */
 .about {
-    padding: 20px 10px;
+    padding: 30px 10px 90px;
     background-color: var(--main-color);
+    position: relative;
 }
 
 .header-section {
     color: var(--darkwhite-color);
     text-align: center;
-    font-family: 'Shojumaru', cursive;
-    font-size: 35px;
+    font-family: var(--racing-font);
+    font-size: 48px;
     font-weight: 100;
+    text-transform: capitalize;
 }
 
 .header-section i {
@@ -249,15 +260,24 @@ header ul h1 span {
     align-items: center;
     justify-content: space-between;
     margin-top: 50px;
+    max-width: 700px;
+    width: 100%;
+    position: absolute;
+    bottom: -52px;
+    left: 50%;
+    transform: translate(-50%); 
+    z-index: 1;
 }
 
 .about-icons h1 {
-    font-size: 25px;
-    font-family: 'Shojumaru', cursive;
+    font-size: 20px;
+    font-family: var(--bills-font);
+    font-weight: 800;
+    text-transform: capitalize;
     color: var(--darkwhite-color);
     background-color: var(--sec-color);
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,7 +293,7 @@ header ul h1 span {
     content: "";
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 78px;
     transform: translate(-50%,-50%);
     width: 0px;
     height: 2px;
@@ -283,23 +303,26 @@ header ul h1 span {
 }
 
 .about-icons h1:hover {
-    transform: scale(1.2);
+    transform: scale(1.12);
     box-shadow: 0 0 10px 0 var(--thd-color);
 }
 
 .about-icons h1:hover::after {
-    width: 70px;
+    width: 40px;
 }
 
 .about-two {
-    padding: 20px 10px 50px;
+    padding: 80px 10px 50px;
     background-color: var(--sec-color);
     position: relative;
 }
 
 .about-two .header-section {
     max-width: 430px;
+    font-size: 40px;
     margin: auto;
+    font-family: var(--bills-font);
+    font-weight: 800;
 }
 
 .about-two .speed {
@@ -383,8 +406,9 @@ header ul h1 span {
     color: var(--darkwhite-color);
     bottom: -45px;
     left: -5px;
-    font-size: 18px;
-    font-family: 'Shojumaru', cursive;
+    font-size: 20px;
+    font-family: var(--bills-font);
+    font-weight: 800;
 }
 
 .about-two .speed span:nth-of-type(2)::after {
@@ -393,8 +417,9 @@ header ul h1 span {
     color: var(--darkwhite-color);
     bottom: -45px;
     left: -15px;
-    font-size: 18px;
-    font-family: 'Shojumaru', cursive;
+    font-size: 20px;
+    font-family: var(--bills-font);
+    font-weight: 800;
 }
 
 .about-two .speed span:nth-of-type(3)::after {
@@ -403,8 +428,9 @@ header ul h1 span {
     color: var(--darkwhite-color);
     bottom: -45px;
     left: -15px;
-    font-size: 18px;
-    font-family: 'Shojumaru', cursive;
+    font-size: 20px;
+    font-family: var(--bills-font);
+    font-weight: 800;
 }
 
 .about-two .speed span:nth-of-type(4)::after {
@@ -413,8 +439,9 @@ header ul h1 span {
     color: var(--darkwhite-color);
     bottom: -45px;
     left: -15px;
-    font-size: 18px;
-    font-family: 'Shojumaru', cursive;
+    font-size: 20px;
+    font-family: var(--bills-font);
+    font-weight: 800;
 }
 
 .about-two .speed span:nth-of-type(5)::after {
@@ -423,8 +450,9 @@ header ul h1 span {
     color: var(--darkwhite-color);
     bottom: -45px;
     left: -15px;
-    font-size: 18px;
-    font-family: 'Shojumaru', cursive;
+    font-size: 20px;
+    font-family: var(--bills-font);
+    font-weight: 800;
 }
 
 .about-two .button {
@@ -434,6 +462,10 @@ header ul h1 span {
     transform: translate(-50%);
     text-transform: uppercase;
     z-index: 2;
+    background-color: var(--main-color);
+}
+
+.about-two .button:hover {
     background-color: var(--sec-color);
 }
 /* about done */
@@ -453,6 +485,7 @@ header ul h1 span {
     gap: 20px;
     box-shadow: 0 0 20px var(--darkp-color);
     margin-top: 30px;
+    padding-bottom: 40px;
 }
 
 .future .card .details {
@@ -492,38 +525,46 @@ header ul h1 span {
 }
 
 .future .text {
-    padding: 10px;
-    margin-left: 20px;
+    width: 100%;
+    padding: 10px 10px 10px 20px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .future .text::after {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     top: 50%;
-    left: -15px;
+    left: 0px;
     transform: translate(-50%,-50%);
     background-color: var(--darkwhite-color);
 }
 
 .shadow {
-    box-shadow: 0 0 20px inset var(--darkp-color);
+    /* box-shadow: 0 0 20px inset var(--darkp-color); */
+    background-image: linear-gradient(to right, #58585824,#cdc8c82b);
 }
 
 .future .text h1 {
-    font-family: var(--thd-font) !important;
+    font-family: var(--kantumruy-font) !important;
     font-weight: 600 !important;
     font-size: 25px !important;
+    width: 30%;
 }
 
 .future .text p {
-    font-size: 15px; 
+    font-size: 13px; 
     color: var(--darkp-color);
-    font-family: var(--thd-font);
+    font-family: var(--kaushan-font);
+    max-width: 70%;
+    border-left: 3px solid #a3a3a387;
+    padding-left: 10px;
 }
 
 .future .details .button {
@@ -538,9 +579,13 @@ header ul h1 span {
     text-transform: capitalize;
 }
 
+.future .photo .car-details {
+    height: 120px;
+}
+
 .future .photo h6 {
     color: var(--darkwhite-color);
-    font-family: var(--thd-font);
+    font-family: var(--kantumruy-font);
     font-weight: 500;
     font-size: 14px;
     padding-right: 10px;
@@ -549,8 +594,8 @@ header ul h1 span {
 
 .future .photo p {
     color: var(--darkp-color);
-    font-family: var(--thd-font);
-    font-size: 12px;
+    font-family: var(--kaushan-font);
+    font-size: 13px;
     padding-right: 10px;
     text-align: center;
 }
