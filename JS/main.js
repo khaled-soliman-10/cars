@@ -52,3 +52,61 @@ bmw.onclick = ()=> {
     hSix.textContent = "BMW has a long history in the automobile industry, inventing all that is new and advanced in modern technology, high-quality structures with superior safety standards, and diverse engines in terms of performance, power and acceleration."
     p.textContent = "BMW follows the sequential system in versions such as the sports car (Z4S) open-top with a one-door design, a very powerful 6-cylinder engine with a turbocharger, the total engine power is 255 horsepower,"
 }
+
+let home = document.getElementById("landing");
+let about = document.getElementById("about");
+let future = document.getElementById("future");
+let contact = document.getElementById("contact");
+let links = document.querySelectorAll("header ul li:not(:nth-of-type(4)) a");
+
+window.onscroll = ()=> {
+    //home
+    if (window.scrollY >= home.offsetTop) {
+        links[0].classList.add("link-color")
+    } else {
+        links[0].classList.remove("link-color")
+    }
+    //about
+    if (window.scrollY >= about.offsetTop - 150) {
+        links[0].classList.remove("link-color")
+        links[1].classList.add("link-color")
+    } else {
+        links[1].classList.remove("link-color")
+    }
+    //future
+    if (window.scrollY >= future.offsetTop - 150) {
+        links[1].classList.remove("link-color")
+        links[2].classList.add("link-color")
+    } else {
+        links[2].classList.remove("link-color")
+    }
+    //contact
+    if (window.scrollY >= contact.offsetTop - 500) {
+        links[2].classList.remove("link-color")
+        links[3].classList.add("link-color")
+    } else {
+        links[3].classList.remove("link-color")
+    }
+}
+
+let ul = document.querySelector(".mobile-links ul");
+let list = document.querySelector(".mobile-links .list");
+let ulLinks = document.querySelectorAll(".mobile-links ul a")
+let xMark = `<i class="fa-solid fa-circle-xmark"></i>`
+
+list.onclick = ()=> {
+if (ul.style.display == "flex") {
+    list.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`
+    ul.style.display = "none"
+} else{
+    ul.style.display="flex"
+    list.innerHTML = xMark
+}
+
+}
+ulLinks.forEach(link => {
+    link.onclick = () =>{
+        ul.style.display = "none"
+        list.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`
+    }
+});
