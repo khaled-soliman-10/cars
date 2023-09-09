@@ -730,21 +730,24 @@ footer .copy span {
     position: absolute;
     z-index: 100;
     display: flex;
-    width: 70%;
-    justify-content: space-around;
+    width: 0%;
+    height: 250px;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px;
     gap: 10px;
     background-color: #402f7e;
-    left: 50%;
-    top: 110%;
-    transform: translate(-50%);
-    display: none;
+    left: 0%;
+    top: 100%;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.width {
+    width: 50% !important;
 }
 
 .mobile-links ul li {
-    width: 40%;
+    width: 100%;
     padding: 10px;
     text-align: center;
     font-size: 20px;
@@ -1113,7 +1116,10 @@ footer .copy span {
         width: 160px;
         font-size: 15px;
     }
-    .mobile-links ul {
-        width: 95%;
+    /* .mobile-view {
+        justify-content: space-around;
     }
+    .mobile-links ul {
+        width: 95%; 
+    } */
 } 

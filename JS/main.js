@@ -95,18 +95,26 @@ let ulLinks = document.querySelectorAll(".mobile-links ul a")
 let xMark = `<i class="fa-solid fa-circle-xmark"></i>`
 
 list.onclick = ()=> {
-if (ul.style.display == "flex") {
-    list.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`
-    ul.style.display = "none"
-} else{
-    ul.style.display="flex"
-    list.innerHTML = xMark
-}
+    ul.classList.toggle("width")
+    if (ul.classList.contains("width")) {
+        // ul.style.display = "none"
+        list.innerHTML = xMark
+    } else{
+        list.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`
+        // ul.style.display="flex"
+    }
 
 }
 ulLinks.forEach(link => {
     link.onclick = () =>{
-        ul.style.display = "none"
+        ul.classList.remove("width")
         list.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`
     }
 });
+
+// document.onclick = (e) => {
+//     if (!list.contains(e.target) && !ul.contains(e.target)) {
+//         ul.classList.remove("width");
+//         list.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`;
+//     }
+// }
